@@ -53,6 +53,6 @@ RUN \
 
 RUN find /workspace/build -name "*.so" -exec strip --strip-unneeded {} \;
 
-FROM emby/embyserver:beta AS emby
+FROM lscr.io/linuxserver/emby:beta AS emby
 
-COPY --from=builder /workspace/build/lib /lib
+COPY --from=builder /workspace/build/lib /app/emby/extra/lib
