@@ -1,6 +1,6 @@
 # https://emby.media/community/index.php?/topic/134698-intel-n150-transcoding-not-working/page/2/#findComment-1451703
 
-FROM ubuntu:25.04 AS builder
+FROM ubuntu:18.04 AS builder
 
 WORKDIR /workspace
 
@@ -32,7 +32,7 @@ RUN \
 RUN \
 	git clone https://github.com/intel/gmmlib.git && \
 	cd gmmlib && \
-	git checkout intel-gmmlib-22.7.2 && \
+	git checkout intel-gmmlib-22.8.1 && \
 	mkdir build && \
 	cd build && \
 	cmake -DCMAKE_INSTALL_PREFIX=/workspace/build/usr -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_INSTALL_LIBDIR=/workspace/build/lib -DCMAKE_BUILD_TYPE=ReleaseInternal .. && \
