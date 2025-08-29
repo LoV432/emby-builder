@@ -32,7 +32,7 @@ RUN \
 RUN \
 	git clone https://github.com/intel/gmmlib.git && \
 	cd gmmlib && \
-	git checkout intel-gmmlib-22.8.1 && \
+	git checkout intel-gmmlib-22.7.2 && \
 	mkdir build && \
 	cd build && \
 	cmake -DCMAKE_INSTALL_PREFIX=/workspace/build/usr -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_INSTALL_LIBDIR=/workspace/build/lib -DCMAKE_BUILD_TYPE=ReleaseInternal .. && \
